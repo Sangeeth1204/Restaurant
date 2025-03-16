@@ -169,6 +169,27 @@
                     alert("Please fill all fields and select a table!");
                 }
             });
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    // Toggle Navigation Menu
+    menuBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuBtn.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove("open");
+        }
+    });
+});
+
+            
         </script>
         
       </div>
@@ -221,6 +242,10 @@
       </div>
     </footer>
 
+    
+
    
+  
+
   </body>
 </html>
